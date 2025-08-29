@@ -33,7 +33,21 @@
 
 - What is the key pain point? 
 
-The Head of Marketing wants to find out who the top YouTubers are in 2024 to decide on which YouTubers would be best to run marketing campaigns throughout the rest of the year.
+The Campaign head wants to find out key point by data expert and ask few questions which are below.
+
+Q1 - Which Title Best Fits your Current Role?
+Q2 - Did you switch careers into Data?
+
+Q3 - How Happy are you in your Current Position with the following?
+- Work/Life Balance
+- Coworkers 
+- Management
+- Upward Mobility)
+- Learning New Things
+
+Q4 - How difficult was it for you to break into Data?
+Q5 - If you were to look for a new job today, what would be the most important thing to you?
+
 
 
 - What is the ideal solution? 
