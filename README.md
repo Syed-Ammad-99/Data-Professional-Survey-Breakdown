@@ -6,7 +6,7 @@
 - [Data Source](#data-source)
 - [Stages](#stages)
 - [Design](#design)
-  - [Mockup](#mockup)
+  - [Dashboard](#dashboard)
   - [Tools](#tools)
 - [Development](#development)
   - [Pseudocode](#pseudocode)
@@ -55,22 +55,21 @@ This will help the team to make informed decisions about people which region are
 
 - What data is needed to achieve our objective?
 
-We need data on the top UK YouTubers in 2024 that includes their 
-- channel names
-- total subscribers
-- total views
-- total videos uploaded
-
+We need data on the Data Professional Survey Breakdown that includes their 
+- country of person submit the survey form
+- Favorite Programming Language
+- How Happy are you in your Current Position with the different aspect
 
 - Where is the data coming from?, [see here to find it.](https://github.com/Syed-Ammad-99/Data-Professional-Survey-Breakdown/blob/main/data%20file.xlsx)
 
-
 ## Stages
 
+- Cleaning
 - Design
 - Developement
 - Testing
-- Analysis 
+- Analysis
+- Insigh 
  
 
 ## Design 
@@ -80,26 +79,25 @@ We need data on the top UK YouTubers in 2024 that includes their
 
 To understand what it should contain, we need to figure out what questions we need the dashboard to answer:
 
-1. Who are the top 10 YouTubers with the most subscribers?
-2. Which 3 channels have uploaded the most videos?
-3. Which 3 channels have the most views?
-4. Which 3 channels have the highest average views per video?
-5. Which 3 channels have the highest views per subscriber ratio?
-6. Which 3 channels have the highest subscriber engagement rate per video uploaded?
+1. What is the favorite programming among the voters?
+2. Which job title have the highest avg salary?
+3. How difficult to break into data?
+4. Rate work/Life balance in current environment?
 
 For now, these are some of the questions we need to answer, this may change as we progress down our analysis. 
 
 
-### Dashboard mockup
+### Dashboard
 
 - What should it look like? 
 
 Some of the data visuals that may be appropriate in answering our questions include:
 
-1. Table
-2. Treemap
-3. Scorecards
-4. Horizontal bar chart 
+1. Treemap
+2. Stacked bar chart
+3. Stacked column chart
+4. Scorecards
+5. Donut chart 
 
 
 ### Tools 
@@ -108,11 +106,8 @@ Some of the data visuals that may be appropriate in answering our questions incl
 | Tool | Purpose |
 | --- | --- |
 | Excel | Exploring the data |
-| SQL Server | Cleaning, testing, and analyzing the data |
 | Power BI | Visualizing the data via interactive dashboards |
 | GitHub | Hosting the project documentation and version control |
-| Mokkup AI | Designing the wireframe/mockup of the dashboard | 
-
 
 ## Development
 
@@ -122,196 +117,12 @@ Some of the data visuals that may be appropriate in answering our questions incl
 
 1. Get the data
 2. Explore the data in Excel
-3. Load the data into SQL Server
-4. Clean the data with SQL
-5. Test the data with SQL
+4. Clean the data with Excel
+5. Test the data null values
 6. Visualize the data in Power BI
 7. Generate the findings based on the insights
 8. Write the documentation + commentary
 9. Publish the data to GitHub Pages
-
-### Data exploration notes
-
-This is the stage where you have a scan of what's in the data, errors, inconcsistencies, bugs, weird and corrupted characters etc  
-
-
-- What are your initial observations with this dataset? What's caught your attention so far? 
-
-1. There are at least 4 columns that contain the data we need for this analysis, which signals we have everything we need from the file without needing to contact the client for any more data. 
-2. The first column contains the channel ID with what appears to be channel IDS, which are separated by a @ symbol - we need to extract the channel names from this.
-3. Some of the cells and header names are in a different language - we need to confirm if these columns are needed, and if so, we need to address them.
-4. We have more data than we need, so some of these columns would need to be removed
-
-
-### Data cleaning 
-- What do we expect the clean data to look like? (What should it contain? What contraints should we apply to it?)
-
-The aim is to refine our dataset to ensure it is structured and ready for analysis. 
-
-The cleaned data should meet the following criteria and constraints:
-
-- Only relevant columns should be retained.
-- All data types should be appropriate for the contents of each column.
-- No column should contain null values, indicating complete data for all records.
-
-Below is a table outlining the constraints on our cleaned dataset:
-
-| Property | Description |
-| --- | --- |
-| Number of Rows | 100 |
-| Number of Columns | 4 |
-
-And here is a tabular representation of the expected schema for the clean data:
-
-| Column Name | Data Type | Nullable |
-| --- | --- | --- |
-| channel_name | VARCHAR | NO |
-| total_subscribers | INTEGER | NO |
-| total_views | INTEGER | NO |
-| total_videos | INTEGER | NO |
-
-
-
-- What steps are needed to clean and shape the data into the desired format?
-
-1. Remove unnecessary columns by only selecting the ones you need
-2. Extract Youtube channel names from the first column
-3. Rename columns using aliases
-
-
-
-#### Transform the data 
-
-```sql
-/*
-# 1. Select the required columns
-# 2. Extract the channel name from the 'NOMBRE' column
-*/
-
--- 1.
-SELECT
-    SUBSTRING(NOMBRE, 1, CHARINDEX('@', NOMBRE) -1) AS channel_name,  -- 2.
-    total_subscribers,
-    total_views,
-    total_videos
-
-FROM
-    top_uk_youtubers_2024
-```
-### CREATE VIEW
-
-```sql
-/*
-# Data cleaning steps
-1. Remove unnecesary columns by only selecting the ones we need
-2. Extract the YouTube channel name from the first column.
-3. Rename the column names
-*/
---SELECT 
---	NOMBRE,
---	total_subscribers,
---	total_views,
---	total_videos
---FROM
---	top_uk_youtubers_2024
-
---CHARINDEX
---SELECT CHARINDEX ('@', NOMBRE),NOMBRE FROM top_uk_youtubers_2024
-
---SUBSTRING
-CREATE VIEW view_uk_youtubers_24 AS 
-SELECT CAST(SUBSTRING(NOMBRE,1,CHARINDEX ('@', NOMBRE)-1) AS varchar (100)) AS channel_name,
-	total_subscribers,
-	total_views,
-	total_videos
-FROM top_uk_youtubers_2024
-```
-
-![create-view-query-sql](assets/images/view-query-result.png)
-
-# Testing 
-
-- What data quality and validation checks are you going to create?
-
-Here are the data quality tests conducted:
-
-## Row count check
-```sql
-/*
-# Count the total number of records (or rows) are in the SQL view
-*/
-
-SELECT
-    COUNT(*) AS no_of_rows
-FROM
-    view_uk_youtubers_2024;
-
-```
-![total-row-count](assets/images/total-row-count.png)
-
-## Column count check
-### SQL query 
-```sql
---Count the total number of columns (or fields) are in the SQL view
-
-
-
-SELECT
-    COUNT(*) AS column_count
-FROM
-    INFORMATION_SCHEMA.COLUMNS
-WHERE
-    TABLE_NAME = 'view_uk_youtubers_2024'
-```
-### Output 
-![total-column-count](assets/images/total-column-count.png)
-
-## Data type check
-### SQL query 
-```sql
-/*
-# Check the data types of each column from the view by checking the INFORMATION SCHEMA view
-*/
-
--- 1.
-SELECT
-    COLUMN_NAME,
-    DATA_TYPE
-FROM
-    INFORMATION_SCHEMA.COLUMNS
-WHERE
-    TABLE_NAME = 'view_uk_youtubers_2024';
-```
-### Output 
-![data-type](assets/images/data-types.png)
-
-## Duplicate count check
-### SQL query 
-```sql
-/*
-# 1. Check for duplicate rows in the view
-# 2. Group by the channel name
-# 3. Filter for groups with more than one row
-*/
-
--- 1.
-SELECT
-    channel_name,
-    COUNT(*) AS duplicate_count
-FROM
-    view_uk_youtubers_2024
-
--- 2.
-GROUP BY
-    channel_name
-
--- 3.
-HAVING
-    COUNT(*) > 1;
-```
-### Output
-
-![duplicate-row](assets/images/duplicate-row.png)
 
 # Visualization 
 
