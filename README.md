@@ -49,26 +49,7 @@ Q4 - How difficult was it for you to break into Data?
 
 Q5 - If you were to look for a new job today, what would be the most important thing to you?
 
-
-
-- What is the ideal solution? 
-
-To create a dashboard that provides insights into the top UK YouTubers in 2024 that includes their 
-- subscriber count
-- total views
-- total videos, and
-- engagement metrics
-
-This will help the marketing team make informed decisions about which YouTubers to collaborate with for their marketing campaigns.
-
-3## User story 
-
-As the Head of Marketing, I want to use a dashboard that analyses YouTube channel data in the UK . 
-
-This dashboard should allow me to identify the top performing channels based on metrics like subscriber base and average views. 
-
-With this information, I can make more informed decisions about which Youtubers are right to collaborate with, and therefore maximize how effective each marketing campaign is.
-
+This will help the team to make informed decisions about people which region are more successfull in data related feild.
 
 ## Data source 
 
