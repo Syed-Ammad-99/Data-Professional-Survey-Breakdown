@@ -31,7 +31,7 @@
 
 # Objective 
 
-- What is the key pain point? 
+What is the key pain point? 
 
 The Campaign head wants to find out key point by data expert and ask few questions which are below.
 
@@ -46,6 +46,7 @@ Q3 - How Happy are you in your Current Position with the following?
 - Learning New Things
 
 Q4 - How difficult was it for you to break into Data?
+
 Q5 - If you were to look for a new job today, what would be the most important thing to you?
 
 
