@@ -131,7 +131,7 @@ Some of the data visuals that may be appropriate in answering our questions incl
 
 - What does the dashboard look like?
 
-![GIF of Power BI Dashboard](assets/images/image.png)
+![GIF of Power BI Dashboard](img.png)
 
 This shows the Top UK Youtubers in 2024 so far. 
 
