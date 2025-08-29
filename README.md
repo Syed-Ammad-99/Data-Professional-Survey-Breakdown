@@ -14,13 +14,7 @@
   - [Results](#results)
 - [Analysis](#analysis)
   - [Findings](#findings)
-  - [Validation](#validation)
-  - [Discovery](#discovery)
-- [Recommendations](#recommendations)
-  - [Potential ROI](#potential-roi)
-  - [Potential Courses of Actions](#potential-courses-of-actions)
-- [Conclusion](#conclusion)
-
+ 
 
 # Objective 
 
@@ -29,6 +23,7 @@ What is the key pain point?
 The Campaign head wants to find out key point by data expert and ask few questions which are below.
 
 Q1 - Which Title Best Fits your Current Role?
+
 Q2 - Did you switch careers into Data?
 
 Q3 - How Happy are you in your Current Position with the following?
@@ -136,12 +131,17 @@ This shows the Data Professional Survey Breakdown do far.
 For this analysis, we're going to focus on the questions below to get the information we need for our survey - 
 
 Q1 - What is the favorite programming among the voters?
+
 Q2 - Did you switch careers into Data?
+
 Q3 - Which job title have the highest avg salary?
-Q4 - If you were to look for a new job today, what would be the most important thing to you?
-Q5 - How Happy are you in your Current Position with the following?
+
+Q4 - How Happy are you in your Current Position with the following?
 - Work/Life Balance
 - Salary
+
+Q5 - If you were to look for a new job today, what would be the most important thing to you?
+
   
 ### 1. What is the favorite programming among the voters?
 
@@ -158,8 +158,6 @@ Note: Out of 420 votes 255 are data analyst who love programming with python.
 
 ### 2. Did you switch careers into Data?
 
-59% of the voters (372) switch their jobs from different feild and end up in data analyst (26), data engineer/scientist (40) and other (306)
-
 | Rank | Job Title      | Votes |
 |------|--------------- |-------|
 | 1    | Data Analyst   | 246.00|
@@ -174,6 +172,6 @@ Note: Out of 420 votes 255 are data analyst who love programming with python.
 
 Data Scientist have the highest avg salary per year of 93.78k.
 
-### 5. How Happy are you in your Current Position with the following?
+### 4. How Happy are you in your Current Position with the following?
 - Voters satisfactory score on Work/Life Balance 5.74 out of 10.
 - Voters satisfactory score on salary 4.27 out of 10.
