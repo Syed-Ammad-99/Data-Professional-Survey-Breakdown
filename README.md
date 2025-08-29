@@ -29,7 +29,7 @@
 - [Conclusion](#conclusion)
 
 
-3# Objective 
+# Objective 
 
 - What is the key pain point? 
 
