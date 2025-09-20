@@ -35,8 +35,6 @@ Q3 - How Happy are you in your Current Position with the following?
 
 Q4 - How difficult was it for you to break into Data?
 
-Q5 - If you were to look for a new job today, what would be the most important thing to you?
-
 This will help the team to make informed decisions about people which region are more successfull in data related feild.
 
 ## Data source 
