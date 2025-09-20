@@ -50,10 +50,9 @@ We need data on the Data Professional Survey Breakdown that includes their
 
 ## Stages
 
-- Cleaning
+- Extract
 - Design
 - Developement
-- Testing
 - Analysis
 - Insigh 
  
@@ -102,10 +101,8 @@ Some of the data visuals that may be appropriate in answering our questions incl
 
 1. Get the data
 2. Explore the data in Excel
-4. Clean the data with Excel
-5. Test the data null values
-6. Visualize the data in Power BI
-7. Generate the findings based on the insights
+3. Visualize the data in Power BI
+4. Generate the findings based on the insights
 
 # Visualization 
 
@@ -135,9 +132,6 @@ Q3 - Which job title have the highest avg salary?
 Q4 - How Happy are you in your Current Position with the following?
 - Work/Life Balance
 - Salary
-
-Q5 - If you were to look for a new job today, what would be the most important thing to you?
-
   
 ### 1. What is the favorite programming among the voters?
 
