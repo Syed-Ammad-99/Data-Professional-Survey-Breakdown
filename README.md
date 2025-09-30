@@ -50,7 +50,6 @@ We need data on the Data Professional Survey Breakdown that includes their
 
 ## Stages
 
-- Extract
 - Design
 - Developement
 - Analysis
